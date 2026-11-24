@@ -68,7 +68,7 @@ p{text-wrap:pretty}
 .marks::before,.marks::after{content:'';position:absolute;width:26px;height:26px;border:2px solid var(--ink);pointer-events:none}
 .marks::before{left:0;top:0;border-right:0;border-bottom:0}
 .marks::after{right:0;bottom:0;border-left:0;border-top:0}
-.video{position:relative;display:block;width:100%;background:#000;border-radius:2px;overflow:hidden}
+.video{position:relative;display:block;width:100%;background:#8a9a7e;border-radius:2px;overflow:hidden}
 .video img{width:100%;height:auto;aspect-ratio:548/720;object-fit:cover}
 .play{position:absolute;left:16px;bottom:16px;width:60px;height:60px;background:var(--orange);color:var(--ink);display:grid;place-items:center;border-radius:2px;transition:transform .15s}
 .play svg{margin-left:2px}
