@@ -1,0 +1,41 @@
+:root{--ease:cubic-bezier(.22,1,.36,1)}
+
+.top{transition:transform .5s var(--ease),border-color .2s}
+.top.hide{transform:translateY(-100%)}
+@keyframes drop{from{opacity:0;transform:translate3d(0,-16px,0)}}
+.motion .top{animation:drop .9s var(--ease) backwards}
+
+.motion .sp .w{display:inline-block;overflow:hidden;vertical-align:top;padding:.28em .04em;margin:-.28em -.04em}
+.motion .sp .wi{display:inline-block;transform:translate3d(0,118%,0);transition:transform 1.05s var(--ease) calc(var(--b,0s) + var(--i) * 55ms)}
+.motion .sp.in .wi{transform:none}
+
+.motion [data-rv]{opacity:0;transform:translate3d(0,var(--y,28px),0);filter:blur(var(--bl,0px));transition:opacity 1s var(--ease) var(--d,0s),transform 1s var(--ease) var(--d,0s),filter 1s var(--ease) var(--d,0s)}
+.motion [data-rv="block"]{--bl:6px}
+.motion [data-rv="row"]{--y:20px;transition-duration:.85s}
+.motion [data-rv].in{opacity:1;transform:none;filter:none}
+
+.motion img[data-media]{clip-path:inset(0 0 100% 0);transform:scale(1.14);transition:clip-path 1.3s var(--ease) var(--d,0s),transform 1.7s var(--ease) var(--d,0s)}
+.motion img[data-media].in{clip-path:inset(0 0 0 0);transform:none}
+
+@keyframes rise{from{opacity:0;transform:translate3d(0,22px,0)}}
+@keyframes uncover{from{clip-path:inset(0 0 100% 0)}}
+@keyframes settle{from{transform:scale(1.16)}}
+.motion .hero-text>*{animation:rise .95s var(--ease) backwards;animation-delay:var(--delay,0s)}
+.motion .hero-text>h1{animation:none}
+.motion .hero-text .hero-kick{--delay:0s}
+.motion .hero-text .lede{--delay:.6s}
+.motion .hero-text .buy,.motion .hero-text .hero-act{--delay:.75s}
+.motion .hero-text .fine{--delay:.9s}
+.motion .hero .sp{--b:.12s}
+.motion .hero-media .video,.motion .hero-fig .marks{animation:rise 1.1s .25s var(--ease) backwards}
+.motion .hero-media .video img,.motion .hero-fig .video img{animation:uncover 1.4s .25s var(--ease) backwards,settle 1.9s .25s var(--ease) backwards}
+.motion .hero-fig .marks::before,.motion .hero-fig .marks::after{animation:rise 1s 1.1s var(--ease) backwards}
+
+@media (hover:hover) and (pointer:fine){
+  .btn{transition:transform .35s var(--ease),background-color .2s,color .2s,border-color .2s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn:active{transform:translateY(0);transition-duration:.1s}
+  .clip img{transition:transform .8s var(--ease)}
+  .clip:hover img{transform:scale(1.05)}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}

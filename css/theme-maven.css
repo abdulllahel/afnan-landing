@@ -1,0 +1,80 @@
+/* MAVEN — course-marketplace: navy hero band, lavender canvas, white bordered cards, lime highlights, sticky enroll card */
+[data-theme=maven] body{background:var(--bg)}
+[data-theme=maven] .site-header{background:#080A2C;color:#fff;border-color:rgba(255,255,255,.08)}
+[data-theme=maven] .site-header .nav a{color:rgba(255,255,255,.7)}[data-theme=maven] .site-header .nav a:hover,[data-theme=maven] .site-header .nav a.is-active{color:#fff;background:rgba(255,255,255,.08)}
+[data-theme=maven] .site-header .signin{color:rgba(255,255,255,.75)}
+[data-theme=maven] .site-header .btn-primary,[data-theme=maven] .btn-primary{background:var(--accent);color:#0A0B2E}
+[data-theme=maven] .site-header .burger{border-color:rgba(255,255,255,.25)}[data-theme=maven] .site-header .burger span{background:#fff}
+[data-theme=maven] .drawer{background:#080A2C;color:#fff}
+[data-theme=maven] .btn{border-radius:10px;font-weight:700}
+[data-theme=maven] .btn-ghost{background:#fff;border-color:var(--line)}
+[data-theme=maven] .kick{background:var(--accent);color:#0A0B2E;border-radius:6px;font-weight:700;font-size:11px;letter-spacing:.04em;text-transform:uppercase}
+[data-theme=maven] .card{border:1px solid var(--line);border-radius:14px}
+[data-theme=maven] .card:hover{border-color:#b9c0dd}
+[data-theme=maven] .sec-head{text-align:left;align-items:flex-start;margin-inline:0;max-width:760px}
+[data-theme=maven] .sec-head h2{font-size:clamp(26px,3.4vw,42px)}
+[data-theme=maven] .tag,[data-theme=maven] .pill{background:#EBEEF8;border-color:transparent;border-radius:999px;font-weight:600;color:#0A0B2E}
+[data-theme=maven] .tag::before{content:'';width:6px;height:6px;border-radius:50%;background:#0A0B2E;margin:auto 6px auto 0;opacity:.5}
+/* page frame with hairline column rules like maven.com */
+[data-theme=maven] main{max-width:1264px;margin:0 auto;background:#EBEEF8;border-inline:1px solid var(--line)}
+[data-theme=maven] .sec{border-top:1px solid var(--line)}
+/* hero: navy band, copy + video left, sticky enroll card right */
+[data-theme=maven] .hero{background:#080A2C;color:#fff;border-top:0}
+[data-theme=maven] .hero-grid{grid-template-columns:1fr 360px;grid-template-areas:"copy card" "visual card";align-items:start;gap:36px}
+[data-theme=maven] .hero-copy{grid-area:copy}[data-theme=maven] .hero-visual{grid-area:visual}[data-theme=maven] .hero-card{grid-area:card}
+[data-theme=maven] .eyebrow{display:inline-block;background:var(--accent);color:#0A0B2E;padding:4px 10px;border-radius:6px;font-weight:700;font-family:var(--f-body),sans-serif;letter-spacing:.02em}
+[data-theme=maven] .hero h1{font-size:clamp(30px,4vw,50px)}
+[data-theme=maven] .lead{color:rgba(255,255,255,.72)}
+[data-theme=maven] .micro{color:rgba(255,255,255,.7)}[data-theme=maven] .micro li::before{background:var(--accent)}
+[data-theme=maven] .hero .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.3)}
+[data-theme=maven] .vid{border-radius:14px;aspect-ratio:16/9;}
+[data-theme=maven] .play{background:var(--accent)}
+[data-theme=maven] .bubble{display:none}
+[data-theme=maven] .sketch{display:none}
+[data-theme=maven] .hero-card{display:block;background:#fff;color:#0A0B2E;border-radius:14px;padding:22px;position:sticky;top:calc(var(--tabs-h) + var(--hdr-h) + 16px);grid-row:1 / span 2;}
+[data-theme=maven] .hc-top{display:flex;gap:8px;font-size:12px;color:var(--muted);margin-bottom:8px}[data-theme=maven] .hc-badge{background:#EAFBC4;color:#0A0B2E;border-radius:999px;padding:2px 10px;font-weight:700}
+[data-theme=maven] .hc-price{display:flex;align-items:baseline;gap:10px}[data-theme=maven] .hc-price b{font:700 44px/1.1 var(--f-display),sans-serif}[data-theme=maven] .hc-price s{color:var(--muted)}
+[data-theme=maven] .hero-card>p{color:var(--muted);font-size:13px;margin-bottom:12px}
+[data-theme=maven] .hero-card ul{display:grid;gap:6px;border-top:1px solid var(--line);padding:14px 0;margin-bottom:14px;font-size:14px}[data-theme=maven] .hero-card li{display:flex;gap:8px;align-items:center}[data-theme=maven] .hero-card li svg{color:#4a8a00}
+[data-theme=maven] .hero-card .btn{width:100%}[data-theme=maven] .hc-g{text-align:center;margin:10px 0 0!important}
+@media(max-width:1000px){[data-theme=maven] .hero-grid{grid-template-columns:1fr;grid-template-areas:"copy" "visual" "card"}[data-theme=maven] .hero-card{position:static;grid-row:auto}}
+/* facts as a light bar */
+[data-theme=maven] .facts{background:#fff;border-bottom:1px solid var(--line)}[data-theme=maven] .facts .wrap{padding:0}
+[data-theme=maven] .facts-grid{border:0;border-radius:0;background:none}
+/* projects band goes dark like "Free lessons" */
+[data-theme=maven] #build{background:#080A2C;color:#fff}
+[data-theme=maven] #build .sub,[data-theme=maven] #build .ph-note{color:rgba(255,255,255,.65)}
+[data-theme=maven] #build .outcome,[data-theme=maven] #build .proj-body{background:#12143A;border-color:rgba(255,255,255,.1);color:#fff}
+[data-theme=maven] #build .outcome p,[data-theme=maven] #build .num,[data-theme=maven] #build .pinfo p,[data-theme=maven] #build .pinfo dt{color:rgba(255,255,255,.65)}
+[data-theme=maven] #build .tag,[data-theme=maven] #build .pill{background:rgba(255,255,255,.1);color:#fff}
+[data-theme=maven] #build .mini{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.1);color:#fff}
+[data-theme=maven] #build .mini-web i,[data-theme=maven] #build .mini-pipe span{background:rgba(255,255,255,.08);border-color:transparent;color:#fff}
+[data-theme=maven] #build .mini-web i.on,[data-theme=maven] #build .mini-pipe span.on{background:var(--accent);color:#0A0B2E}
+[data-theme=maven] #build .phone{background:transparent;border-color:#fff}
+[data-theme=maven] #build .ptab{background:#12143A;border-color:rgba(255,255,255,.12);color:rgba(255,255,255,.6)}[data-theme=maven] #build .ptab small{color:#fff}
+[data-theme=maven] #build .ptab.is-on{border-color:var(--accent);}
+[data-theme=maven] #build .check svg{color:var(--accent)}
+[data-theme=maven] #build .pprev{background:#0A0B2E;border-color:rgba(255,255,255,.1)}[data-theme=maven] #build .seg{background:#12143A;border-color:rgba(255,255,255,.15)}[data-theme=maven] #build .seg .is-on{background:var(--accent);color:#0A0B2E}
+[data-theme=maven] #build .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.3)}
+[data-theme=maven] #build .pinfo dl div{border-color:rgba(255,255,255,.12)}
+/* course-card feel */
+[data-theme=maven] .aud,[data-theme=maven] .how,[data-theme=maven] .rev,[data-theme=maven] .vent{background:#fff}
+[data-theme=maven] .aud.is-on{}
+[data-theme=maven] .step,[data-theme=maven] .stg-btn,[data-theme=maven] .mod-btn,[data-theme=maven] .tool{background:#fff}
+[data-theme=maven] .step.is-on,[data-theme=maven] .stg-btn.is-open,[data-theme=maven] .mod-btn.is-open{background:#0A0B2E;color:#fff}
+[data-theme=maven] .progress span{background:var(--accent);}
+[data-theme=maven] .stg-body{border:1px solid var(--line)}
+[data-theme=maven] .vs-new{background:#0A0B2E}[data-theme=maven] .vs-old{background:#fff}
+[data-theme=maven] .why-c{background:#fff!important}[data-theme=maven] .why-c .num{background:var(--accent);color:#0A0B2E;width:max-content;padding:2px 8px;border-radius:6px;font-weight:700}
+[data-theme=maven] .bars span{background:#DDE3FA}[data-theme=maven] .bars span:last-child{background:#0A0B2E}
+[data-theme=maven] .stars{color:#E2A400}
+[data-theme=maven] .glance-grid li{background:#fff}
+[data-theme=maven] .val .tot{background:#EAFBC4}
+[data-theme=maven] .price-card{background:#080A2C;border-radius:14px;}[data-theme=maven] .price-card .btn-block{background:var(--accent);color:#0A0B2E}[data-theme=maven] .warn{background:rgba(184,242,90,.12);border:1px solid rgba(184,242,90,.3)}
+[data-theme=maven] .qa{background:#fff;border-radius:10px}
+[data-theme=maven] .fin{background:#080A2C;color:#fff;border-radius:14px;margin:0 auto;width:calc(100% - 48px);background-image:repeating-linear-gradient(90deg,rgba(184,242,90,.22) 0 2px,transparent 2px 9px);background-size:100% 100%}
+[data-theme=maven] .fin h2{}[data-theme=maven] .fin p{color:rgba(255,255,255,.8)}[data-theme=maven] .fin .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
+[data-theme=maven] .foot{background:#080A2C;border-radius:0}
+[data-theme=maven] .rv{transition-duration:.6s}
+
+[data-theme=maven] .faq-list{margin-left:0}

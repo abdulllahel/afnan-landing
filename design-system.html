@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="bn" data-theme="lattice">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Afnan — Design systems (5 directions)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600&family=Tiro+Bangla:ital@0;1&family=Anek+Bangla:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Hind+Siliguri:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Instrument+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css"><link rel="stylesheet" href="css/course-page.css">
+<style>
+.ds{max-width:1100px;margin:0 auto;padding:40px 24px 120px}
+.ds h1{font-size:clamp(32px,5vw,56px);margin-bottom:6px}.ds .meta{color:var(--muted);margin-bottom:36px}
+.ds section{margin-top:48px}.ds h3.t{font:600 12px var(--f-mono),monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;border-bottom:1px solid var(--line);padding-bottom:8px}
+.sw{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.sw div{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface);font-size:12px}.sw i{display:block;height:64px;border-bottom:1px solid var(--line)}.sw b{display:block;padding:8px 10px 0}.sw code{display:block;padding:0 10px 8px;color:var(--muted);font-family:var(--f-mono),monospace}
+.row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}.spec{display:grid;gap:18px}.spec p small{display:block;font:11px var(--f-mono),monospace;color:var(--muted);margin-top:4px}
+.rad{display:flex;gap:14px;flex-wrap:wrap}.rad div{width:110px;height:70px;border:1px solid var(--ink);display:grid;place-items:center;font:11px var(--f-mono),monospace}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}@media(max-width:700px){.two{grid-template-columns:1fr}}
+</style>
+<script src="js/tokens.js"></script>
+</head>
+<body>
+<div class="theme-bar" id="themeBar"><span class="tb-label">Design system</span><div class="tb-tabs" id="tabs" role="tablist"></div><a class="tb-ds" href="index.html">← Landing page</a></div>
+<div class="ds" id="ds"></div>
+<script>
+var T = window.THEMES, order = window.THEME_ORDER;
+var tabs = document.getElementById('tabs');
+tabs.innerHTML = order.map(function (k) { return '<button role="tab" data-t="' + k + '">' + T[k].label + '</button>'; }).join('');
+function labelOf(k) { return k.replace(/[A-Z]/g, function (m) { return '-' + m.toLowerCase(); }); }
+function render(k) {
+  document.documentElement.setAttribute('data-theme', k);
+  location.hash = k;
+  [].forEach.call(tabs.children, function (b) { b.setAttribute('aria-selected', b.dataset.t === k); });
+  var t = T[k], v = t.vars;
+  var groups = [['Core', ['bg', 'surface', 'surface2', 'ink', 'muted', 'line']], ['Brand', ['primary', 'primaryInk', 'primarySoft', 'accent', 'accentSoft', 'dark', 'darkInk', 'danger']], ['Tints (cards, stages)', ['t1', 't2', 't3', 't4', 't5', 't6', 't7']]];
+  var sw = groups.map(function (g) { return '<section><h3 class="t">Color · ' + g[0] + '</h3><div class="sw">' + g[1].map(function (n) { return '<div><i style="background:' + v[n] + '"></i><b>--' + labelOf(n) + '</b><code>' + v[n] + '</code></div>'; }).join('') + '</div></section>'; }).join('');
+  var fam = function (f) { return f.replace(/'/g, ''); };
+  document.getElementById('ds').innerHTML =
+    '<h1>' + t.label + ' direction</h1><p class="meta">' + t.vibe + ' · Source: ' + t.source + '</p>' + sw +
+    '<section><h3 class="t">Typography</h3><div class="spec">' +
+    '<p style="font:' + v.hWeight + ' clamp(36px,6vw,72px)/1.1 ' + v.fDisplay + ',\'Hind Siliguri\';letter-spacing:' + v.hTrack + '">কোডিং না জেনেও AI দিয়ে অ্যাপ বানান<small>Display · ' + fam(v.fDisplay) + ' ' + v.hWeight + ' · tracking ' + v.hTrack + ' · Bengali fallback Hind Siliguri</small></p>' +
+    '<p style="font:600 28px/1.3 ' + v.fDisplay + ',\'Hind Siliguri\'">Heading 2 — ৮টি Module · ৪০+ Lessons<small>H2 / H3 scale: 52 / 32 / 22 / 18</small></p>' +
+    '<p style="font:400 17px/1.7 ' + v.fBody + ',\'Hind Siliguri\'">Body — সহজ বাংলায় ধাপে ধাপে শিখবেন, কীভাবে AI-কে দিয়ে কাজ করিয়ে নিজের website আর mobile app বানাবেন।<small>Body 16–19px / 1.65 · ' + fam(v.fBody) + '</small></p>' +
+    '<p style="font:500 12px ' + v.fMono + ';letter-spacing:.08em;text-transform:uppercase">MODULE 01 · 7 TOPICS · QUICK START<small>Label / mono · ' + fam(v.fMono) + ' 11–12px, uppercase, +0.08em</small></p></div></section>' +
+    '<section><h3 class="t">Radius &amp; elevation</h3><div class="rad"><div style="border-radius:' + v.rBtn + '">button ' + v.rBtn + '</div><div style="border-radius:' + v.rCard + '">card ' + v.rCard + '</div><div style="border-radius:' + v.rChip + '">chip ' + v.rChip + '</div></div></section>' +
+    '<section><h3 class="t">Buttons &amp; chips</h3><div class="row"><a class="btn btn-primary" href="#">Enroll Now · ৳990</a><a class="btn btn-ghost" href="#">▶ Demo Class দেখুন</a><span class="kick">limited-time offer</span><span class="tag">Claude Code</span><span class="tag">Cursor</span></div></section>' +
+    '<section><h3 class="t">Cards</h3><div class="two"><article class="card"><span class="num">01</span><h3 style="margin:8px 0">Build Websites</h3><p style="color:var(--muted)">AI দিয়ে login, database আর admin panel সহ পুরো একটা website।</p><div class="tags" style="margin-top:12px"><span class="tag">Frontend</span><span class="tag">Backend</span></div></article>' +
+    '<article class="card" style="background:' + v.t1 + '"><span class="num">TINT</span><h3 style="margin:8px 0">Tinted feature card</h3><p style="color:var(--muted)">Used for audience, why-choose, stage panels.</p></article></div></section>' +
+    '<section><h3 class="t">Motion</h3><p style="color:var(--muted)">Scroll reveal: translateY + fade (theme-tuned duration). Hover: card lift. Accordions: grid-rows transition. All disabled under prefers-reduced-motion.</p></section>';
+}
+tabs.addEventListener('click', function (e) { var b = e.target.closest('button'); if (b) render(b.dataset.t); });
+render(order.indexOf(location.hash.slice(1)) > -1 ? location.hash.slice(1) : order[0]);
+</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+/* FOLK — editorial: huge tight type, hairline rules, flat olive / lilac / khaki panels, pill buttons */
+[data-theme=folk] body{background:#fff;counter-reset:sec}
+[data-theme=folk] .site-header{background:rgba(255,255,255,.9)}
+[data-theme=folk] h1,[data-theme=folk] h2{font-weight:500}
+[data-theme=folk] .sec{border-top:1px solid var(--ink);margin:0 24px;padding-inline:0}
+[data-theme=folk] .hero,[data-theme=folk] .facts,[data-theme=folk] .final{border-top:0}
+[data-theme=folk] .sec .wrap{padding:0}
+[data-theme=folk] .sec-head{align-items:flex-start;text-align:left;max-width:none;margin-inline:0;display:grid;grid-template-columns:200px 1fr;gap:12px 24px}
+[data-theme=folk] .sec-head h2{font-size:clamp(34px,6vw,84px);line-height:1.02;grid-column:2;letter-spacing:-.04em}
+[data-theme=folk] .sec-head .sub{grid-column:2;max-width:560px}
+[data-theme=folk] .sec-head .kick{grid-column:1;grid-row:1 / span 3;background:none;padding:0;font:500 12px var(--f-mono),monospace;text-transform:uppercase;letter-spacing:.06em}
+[data-theme=folk] .sec-head .kick::before{content:'■ ';margin-right:6px;font-size:9px}
+[data-theme=folk] .btn{border-radius:999px;padding:14px 26px}
+[data-theme=folk] .btn-primary{background:#1c1b19}[data-theme=folk] .btn-primary:hover{transform:scale(1.03)}
+[data-theme=folk] .btn-ghost{background:#fff;border:1px solid #1c1b19}
+[data-theme=folk] .card{border:0;border-radius:20px;background:var(--surface2)}
+[data-theme=folk] .card:hover{transform:none;background:var(--t1)}
+[data-theme=folk] .tag,[data-theme=folk] .pill{background:#fff;border:1px solid #1c1b19;border-radius:999px;font-size:12px}
+/* hero: giant left headline, video in a pastel panel */
+[data-theme=folk] .hero{padding-top:clamp(24px,5vw,64px)}
+[data-theme=folk] .hero-grid{grid-template-columns:1fr;gap:40px}
+[data-theme=folk] .hero .wrap{padding:0}
+[data-theme=folk] .hero h1{font-size:clamp(40px,8.4vw,120px);line-height:.98;letter-spacing:-.045em;max-width:1100px}
+[data-theme=folk] .hero-copy{display:grid;grid-template-columns:1fr 340px;gap:0 56px;align-items:end}
+[data-theme=folk] .hero-copy h1,[data-theme=folk] .eyebrow{grid-column:1/-1}
+[data-theme=folk] .lead{grid-column:2;grid-row:3;margin:0 0 20px}
+[data-theme=folk] .cta-row{grid-column:1;grid-row:3}
+[data-theme=folk] .micro{grid-column:1/-1;margin-top:26px;border-top:1px solid #1c1b19;padding-top:14px}
+[data-theme=folk] .eyebrow{color:#1c1b19;margin-bottom:22px}
+[data-theme=folk] .hero-visual{background:#C9CC8F;border-radius:24px;padding:clamp(16px,4vw,56px);overflow:hidden;display:grid;place-items:center}
+[data-theme=folk] .vid-card{width:100%;max-width:820px}
+[data-theme=folk] .vid{border-radius:14px;}
+[data-theme=folk] .sketch{display:block;position:absolute;right:-20px;bottom:-60px;width:200px;opacity:.95}
+[data-theme=folk] .bubble{background:#fff;rotate:-4deg;left:-10px;right:auto;top:-10px}
+/* facts as a marquee-like rule row */
+[data-theme=folk] .facts{margin:0 24px;padding:18px 0}
+[data-theme=folk] .facts-grid{background:none;border:0;border-radius:0;display:flex;overflow-x:auto;gap:36px;scrollbar-width:none}
+[data-theme=folk] .facts-grid li{border:0!important;flex-direction:row;align-items:baseline;gap:8px;padding:0;white-space:nowrap}
+[data-theme=folk] .facts-grid i{display:none}[data-theme=folk] .facts-grid b{font-size:26px;font-weight:500}
+/* panels: flat colors, no borders */
+[data-theme=folk] .outcome:nth-child(1){background:#E5EBD3}[data-theme=folk] .outcome:nth-child(2){background:#D9C6E3}[data-theme=folk] .outcome:nth-child(3){background:#C9CC8F}[data-theme=folk] .outcome:nth-child(4){background:#E7E3DF}
+[data-theme=folk] .mini{background:rgba(255,255,255,.6);border:0}
+[data-theme=folk] .proj-body,[data-theme=folk] .mod-body{border:0;background:#E7E3DF;border-radius:20px}
+[data-theme=folk] .pprev{background:#D9C6E3;border:0}
+[data-theme=folk] .ptab,[data-theme=folk] .stg-btn,[data-theme=folk] .mod-btn,[data-theme=folk] .step,[data-theme=folk] .tool{background:#fff;border:1px solid #1c1b19;border-radius:999px;padding:12px 20px}
+[data-theme=folk] .mod-btn{border-radius:20px}
+[data-theme=folk] .ptab.is-on,[data-theme=folk] .stg-btn.is-open,[data-theme=folk] .mod-btn.is-open,[data-theme=folk] .step.is-on,[data-theme=folk] .tool.is-on{background:#1c1b19;color:#fff;}
+[data-theme=folk] .ptab.is-on small{color:#fff}
+[data-theme=folk] .stg-body{border:0}
+[data-theme=folk] .aud{background:#E7E3DF}[data-theme=folk] .aud.is-on{background:#E5EBD3;}
+[data-theme=folk] .vs-old{background:#E7E3DF}[data-theme=folk] .vs-new{background:#2C4004}
+[data-theme=folk] .why-c[data-c="0"]{background:#E5EBD3}[data-theme=folk] .why-c[data-c="1"]{background:#D9C6E3}[data-theme=folk] .why-c[data-c="2"]{background:#C9CC8F}[data-theme=folk] .why-c[data-c="3"]{background:#E7E3DF}[data-theme=folk] .why-c[data-c="4"]{background:#F3D9C6}
+[data-theme=folk] .glance-grid li{border:0;background:#E7E3DF;border-radius:20px}[data-theme=folk] .glance-grid li:nth-child(2){background:#E5EBD3}[data-theme=folk] .glance-grid li:nth-child(3){background:#D9C6E3}[data-theme=folk] .glance-grid li:nth-child(4){background:#C9CC8F}
+/* reviews: big editorial quotes */
+[data-theme=folk] .rev{background:none;border-top:1px solid #1c1b19;border-radius:0;padding:20px 0}
+[data-theme=folk] .rev blockquote{font:500 22px/1.35 var(--f-display),'Hind Siliguri',sans-serif;letter-spacing:-.02em}
+[data-theme=folk] .stars{color:#1c1b19}
+[data-theme=folk] .qa{background:none;border:0;border-top:1px solid #1c1b19;border-radius:0}[data-theme=folk] .qa:last-child{border-bottom:1px solid #1c1b19}
+[data-theme=folk] .qa>button{padding-inline:0;font-size:20px}[data-theme=folk] .qa .ans>p{padding-inline:0}
+[data-theme=folk] .faq-list{max-width:none;gap:0;margin-left:224px}
+[data-theme=folk] .val li{border-color:#1c1b19}[data-theme=folk] .val .tot{background:#E5EBD3}
+[data-theme=folk] .price-card{background:#2C4004;border-radius:24px;}[data-theme=folk] .price-card .btn-block{background:#fff;color:#1c1b19}
+[data-theme=folk] .fin{background:#C9CC8F;border-radius:24px;margin:0 auto;width:calc(100% - 48px);text-align:left;align-items:flex-start}[data-theme=folk] .fin h2{font-size:clamp(40px,8vw,112px);line-height:1;letter-spacing:-.045em}[data-theme=folk] .fin p{color:#1c1b19}
+[data-theme=folk] .final{margin:0}
+[data-theme=folk] .foot{background:#1c1b19;border-radius:24px 24px 0 0;margin:0 12px}
+[data-theme=folk] .rv{transform:translateY(34px);transition-duration:.9s}
+@media(max-width:900px){[data-theme=folk] .sec-head{grid-template-columns:1fr}[data-theme=folk] .sec-head h2,[data-theme=folk] .sec-head .sub,[data-theme=folk] .sec-head .kick{grid-column:1;grid-row:auto}[data-theme=folk] .hero-copy{grid-template-columns:1fr}[data-theme=folk] .lead,[data-theme=folk] .cta-row{grid-column:1;grid-row:auto}[data-theme=folk] .faq-list{margin-left:0}[data-theme=folk] .sketch{width:110px;bottom:-30px}}
