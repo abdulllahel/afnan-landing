@@ -1,0 +1,53 @@
+:root{
+  --bg:#fff;--surface:#fff;--tint:#F3F5FB;--ink:#0B1230;--muted:#586079;--line:#E1E5F0;
+  --brand:#0B1230;--brand-ink:#fff;--lime:#C9F24F;
+  --p0:#EAF7C4;--p1:#E4EAFB;--p2:#F4E9FA;--p3:#DDF3EE;
+  --hero-bg:#0B1230;--hero-ink:#fff;--hero-muted:#B3BCDA;
+  --dark-bg:#0B1230;--dark-ink:#fff;--dark-card:#141C45;--dark-line:#263066;--dark-muted:#AEB8DA;
+  --r:14px;--rb:10px;
+  --head:'Sora','Akhand Bengali','Anek Bangla',system-ui,sans-serif;
+  --body:'Manrope','Akhand Bengali','Anek Bangla',system-ui,sans-serif;
+  --hw:700;--ht:-.035em;
+}
+.top{background:#0B1230;color:#fff;border-bottom:1px solid #1C2552}
+.top .menu a{color:#B3BCDA}.top .menu a:hover{color:#fff}
+.btn-p{background:var(--lime);color:#0B1230}
+.btn-p:hover{filter:none;background:#B8E43A}
+.hero-kick{color:var(--lime);font-weight:700}
+.hero h1{font-weight:700;letter-spacing:-.04em;font-size:clamp(36px,4.6vw,60px)}
+.hero-grid{padding-block:72px 96px;grid-template-columns:minmax(0,1.3fr) minmax(0,.8fr)}
+.hero .btn-l{border-color:#3A4580}
+.hero .btn-l:hover{background:#fff;color:#0B1230;border-color:#fff}
+.hero-media .video{width:min(100%,360px);border:1px solid #2B3770;border-radius:16px}
+.play{background:var(--lime);color:#0B1230}
+.facts{background:transparent;margin:0 auto;padding:0;width:min(1200px,100% - 48px);border:0;border-radius:0;gap:0}
+.wrap:has(>.facts){width:100%;background:var(--lime)}
+.facts>div{padding:26px 24px;border-left:1px solid rgba(11,18,48,.15)}
+.facts>div:first-child{border-left:0}
+.facts dd{color:#33401a}
+.sec-h h2{font-weight:700}
+.sec-h h2::before{content:'';display:block;width:44px;height:6px;border-radius:3px;background:var(--lime);margin-bottom:22px}
+.card{border-radius:14px;background:#fff}
+.c0,.c1,.c2,.c3{background:#fff;border-color:var(--line)}
+.c0:hover,.c1:hover,.c2:hover,.c3:hover{border-color:#0B1230}
+.chips li{background:var(--tint);border-color:transparent}
+.tag{background:var(--lime);color:#0B1230;padding:5px 10px;border-radius:6px;font-weight:700}
+.tint{background:#F3F5FB}
+.cmp .neu{background:#EAF7C4}
+.cmp .old{background:#fff}
+.stg .n,.how .n{color:#0B1230;background:var(--lime);display:inline-grid;place-items:center;width:44px;height:44px;border-radius:10px;font:700 20px var(--head);margin-bottom:18px}
+.dark .stg .n{background:var(--lime);color:#0B1230}
+.sec.dark{background:#0B1230}
+.dark .card{background:var(--dark-card);border-color:var(--dark-line)}
+.dark .card p{color:var(--dark-muted)}.dark .meta b{color:#fff}
+.dark h2{color:#fff}.dark .sec-h p{color:var(--dark-muted)}
+.m-n{font-weight:700;color:#0B1230;font-size:24px}
+details[open] .m-n{color:#0B1230;background:var(--lime);border-radius:8px;padding:4px 8px;display:inline-block;width:fit-content}
+.ticket{border:2px solid #0B1230;border-radius:16px}
+.ticket-price b{font-weight:700}
+.ticket-note{background:#0B1230}
+.ticket-note b{color:var(--lime)}
+.ticket-price span{color:#3d5a00;background:var(--p0);padding:2px 8px;border-radius:6px}
+.closing{background:#0B1230}
+.foot{background:#070C22}
+.person img{border-radius:16px}

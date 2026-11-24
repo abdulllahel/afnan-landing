@@ -1,0 +1,59 @@
+:root{
+  --bg:#F3EEE1;--surface:#FBF8F0;--tint:#E9E2CE;--ink:#222617;--muted:#5E614F;--line:#D8D0B9;
+  --brand:#3C4A1F;--brand-ink:#F3EEE1;
+  --p0:#D3DCB0;--p1:#D9CCF0;--p2:#EBDDBB;--p3:#E7D0C4;
+  --dark-bg:#3C4A1F;--dark-ink:#F3EEE1;--dark-card:#485829;--dark-line:#5C6E36;--dark-muted:#CBD5AE;
+  --r:30px;--rb:999px;--sec-y:40px;
+  --head:'Fraunces','Akhand Bengali','Anek Bangla',Georgia,serif;
+  --body:'DM Sans','Akhand Bengali','Anek Bangla',system-ui,sans-serif;
+  --hw:500;--ht:-.025em;
+}
+body{font-size:17.5px}
+h1,h2{font-variation-settings:'opsz' 120}
+.hero-grid{padding-block:56px 48px;gap:56px}
+.hero h1{font-size:clamp(40px,5.4vw,76px);line-height:1.12;font-weight:500}
+.hero-kick{font-family:var(--body);color:var(--brand);padding:7px 16px;border-radius:999px;background:var(--p1);display:inline-block}
+.btn{border-radius:999px;font-weight:600}
+.hero-media{padding:28px 28px 20px;border-radius:44px;background:var(--brand);color:var(--dark-ink)}
+.hero-media figcaption{color:var(--dark-muted)}
+.video{border-radius:30px;width:100%}
+.play{background:#EBDDBB;color:#222617}
+.facts{border:0;gap:12px;margin-block:16px 0}
+.facts>div{background:var(--surface);border-radius:26px;padding:24px 28px}
+.sec{padding-block:0;margin-top:16px}
+.sec>.wrap{width:min(1200px,100% - 48px);padding:88px 64px;border-radius:44px;background:var(--surface)}
+.sec.tint>.wrap{background:var(--p0)}
+#build>.wrap{background:var(--p1)}
+#tools>.wrap{background:var(--p2)}
+#instructor>.wrap{background:var(--p3)}
+#news>.wrap{background:var(--p0)}
+#faq>.wrap{background:var(--p1)}
+.tint{background:transparent}
+.sec.dark{background:transparent}
+.sec.dark>.wrap{background:var(--dark-bg);color:var(--dark-ink)}
+.dark .sec-h p,.dark .card p{color:var(--dark-muted)}
+.dark .card{background:var(--dark-card);border-color:var(--dark-line)}
+.dark .meta b{color:#fff}.dark .stg .n{color:#EBDDBB}
+.card{background:var(--bg);border-color:transparent;border-radius:28px}
+.tint .card,#build .card,#faq .acc{background:rgba(255,255,255,.55)}
+.c0,.c1,.c2,.c3{background:rgba(255,255,255,.6)}
+.cmp>div{border-radius:30px}
+.cmp .neu{background:var(--p0)}
+.sec-h{max-width:820px}
+.sec-h h2{font-size:clamp(32px,4.2vw,56px);font-weight:500}
+.stg .n,.how .n,.m-n{font-family:var(--head);font-weight:400;font-style:italic}
+.price-wrap{padding:0}
+#pricing>.wrap{background:var(--surface)}
+.ticket{background:var(--bg);border-color:transparent;border-radius:30px}
+.ticket-note{background:var(--brand);border-radius:20px}
+.person img{border-radius:30px;aspect-ratio:4/5}
+.closing{margin:16px 24px 0;border-radius:44px;padding-block:112px;background:var(--p2);color:var(--ink)}
+.closing p{color:var(--muted)}
+.closing .btn-p{background:var(--brand);color:var(--brand-ink)}
+.closing .btn-l:hover{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.foot{background:transparent;color:var(--muted);border-color:var(--line);margin-top:24px}
+.foot-brand{color:var(--ink)}.foot-end{border-color:var(--line)}
+.top{background:var(--bg)}
+.acc{max-width:none}
+@media (max-width:1040px){.sec>.wrap{padding:56px 32px}}
+@media (max-width:680px){.sec>.wrap{padding:40px 20px;border-radius:30px;width:calc(100% - 24px)}.closing{margin-inline:12px;border-radius:30px}.hero-media{padding:16px}}

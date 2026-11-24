@@ -1,0 +1,45 @@
+:root{
+  --bg:#F7F6FB;--surface:#fff;--tint:#EFEDF8;--ink:#15112B;--muted:#605C78;--line:#E2DFEF;
+  --brand:#4A2FD6;--brand-ink:#fff;
+  --p0:#EAE6FB;--p1:#E3EAFB;--p2:#F1E4F7;--p3:#E6F0F4;
+  --hero-bg:#150F33;--hero-ink:#F4F2FF;--hero-muted:#B9B3DA;
+  --dark-bg:#150F33;--dark-ink:#F4F2FF;--dark-card:#1F1745;--dark-line:#33295F;--dark-muted:#B9B3DA;
+  --r:18px;--rb:12px;
+  --head:'Geist','Akhand Bengali','Anek Bangla',system-ui,sans-serif;
+  --body:'Geist','Akhand Bengali','Anek Bangla',system-ui,sans-serif;
+  --hw:600;--ht:-.03em;
+}
+.top{background:rgba(247,246,251,.92);backdrop-filter:blur(10px)}
+.hero{position:relative}
+.hero-kick{color:#B7A8FF;font-weight:500}
+.hero h1{font-weight:600;letter-spacing:-.035em}
+.hero-grid{grid-template-columns:minmax(0,1.2fr) minmax(0,.9fr);padding-block:96px 120px}
+.hero .btn-p{background:#fff;color:#2A1B8F}
+.hero .btn-l{border-color:#4B3F86}
+.hero .btn-l:hover{background:#fff;color:#150F33;border-color:#fff}
+.hero-media .video{border:1px solid #4B3F86;border-radius:22px;padding:10px;background:#1F1745;width:min(100%,400px)}
+.video img{border-radius:14px}
+.hero .play{background:#fff;color:#2A1B8F}
+.facts{margin-top:-56px;position:relative;z-index:2;background:#fff;border:1px solid var(--line);border-radius:20px;padding:12px 32px;gap:0}
+.facts>div{padding:22px 24px;border-left:1px solid var(--line)}
+.facts>div:first-child{border-left:0}
+.card{background:#fff}
+.c0,.c1,.c2,.c3{background:#fff;border-color:var(--line)}
+.c0 h3::before,.c1 h3::before,.c2 h3::before,.c3 h3::before{content:'';display:block;width:28px;height:4px;border-radius:2px;margin-bottom:18px;background:var(--brand)}
+.c1 h3::before{background:#7A5CFA}.c2 h3::before{background:#B58CF2}.c3 h3::before{background:#4F8FD6}
+.tint{background:#EFEDF8}
+.cmp .neu{background:#EAE6FB}
+.sec.dark{background:var(--hero-bg)}
+.dark .card{background:var(--dark-card);border-color:var(--dark-line)}
+.dark .card p{color:var(--dark-muted)}.dark .meta b{color:#fff}
+.dark .stg .n{color:#A894FF}
+.dark h2{color:#fff}
+.sec-h{max-width:640px}
+.sec-h h2{font-size:clamp(32px,3.8vw,50px)}
+.m-n{color:#9C95BD}
+.ticket{border-color:#CFC9EC}
+.ticket-note{background:#150F33}
+.closing{background:linear-gradient(180deg,#150F33,#251A5E)}
+.closing .btn-p{background:#fff;color:#2A1B8F}
+.foot{background:#0F0A26}
+.person img{border-radius:22px}
