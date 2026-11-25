@@ -57,3 +57,9 @@ h1,h2{font-variation-settings:'opsz' 120}
 .acc{max-width:none}
 @media (max-width:1040px){.sec>.wrap{padding:56px 32px}}
 @media (max-width:680px){.sec>.wrap{padding:40px 20px;border-radius:30px;width:calc(100% - 24px)}.closing{margin-inline:12px;border-radius:30px}.hero-media{padding:16px}}
+#faq .acc{border-radius:28px;padding:8px 36px}
+#faq .acc details:first-child{border-top-color:transparent}
+#faq .acc details:last-child{border-bottom-color:transparent}
+#faq .faq summary{font-weight:500}
+#faq .faq details p{padding-right:48px}
+@media (max-width:680px){#faq .acc{padding:4px 18px;border-radius:22px}}
